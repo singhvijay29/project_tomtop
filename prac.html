@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+        body, html {
+            padding: 0;
+            margin: 0;
+            background: #ececec;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .picContainer {
+            position: relative;
+            width: 650px;
+            height: 400px;
+            border: 5px solid #262626;
+            background: black;
+            border-radius: 10px;
+            box-shadow: 0px 50px 100px #262626;
+        }
+        img {
+            width: 650px;
+            height: 400px;
+            transition: 1s;
+        }   
+        .img {
+            width: 650px;
+            height: 400px;
+            position: absolute;
+            z-index: 0;
+            transition: 1s;
+        }
+        .right {
+            position: absolute;
+            height: 100%;
+            width: 60px;
+            z-index: 99;
+            cursor: pointer;
+            color: #fff;
+            transition: 1s;
+            right:0;
+            top:0;
+        }
+        .right:hover{
+            background: rgba(0, 0, 0, 0.25)
+        }
+        .right:before{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f105";
+            font-size: 50px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) scale(0.75);
+            margin-right: 10px;
+            transition: .5s;
+        }
+        .right:hover:before{
+             transform: translateY(-50%) scale(1);
+        }
+        .left {
+            position: relative;
+            height: 100%;
+            width: 60px;
+            z-index: 99;
+            cursor: pointer;
+            color: #fff;
+            transition: 1s;
+        }
+        .left:hover{
+            background: rgba(0, 0, 0, 0.25)
+        }
+        .left:before{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f104";
+            font-size: 50px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) scale(0.75);
+            margin-left: 10px;
+            transition: .5s;
+        }
+        .left:hover:before{
+             transform: translateY(-50%) scale(1);
+        }
+        input{
+            position: absolute;
+            top: 0;
+             left: -200px;
+        }
+        h2 {
+            position: absolute;
+            color: rgba(0, 0, 0, 0.75);
+            top: -160px;
+            left: 55%;
+            transform: translateX(-50%);
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 36px;
+            width: 70%;
+        }
+        .dot{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            z-index: 99;
+            background: #333;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .5s;
+            box-shadow: 0px 0px 5px #fff;
+        }
+        .dot.a1{margin-left:-30px}
+        .dot.a2{margin-left:-10px}
+        .dot.a3{margin-left:10px}
+        .dot.a4{margin-left:30px}
+        .dot.a1:hover{background:#fff}
+        .dot.a2:hover{background:#fff}
+        .dot.a3:hover{background:#fff}
+        .dot.a4:hover{background:#fff}
+        
+        #info {
+            position: absolute;
+            top: -65px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 25px;
+            color: rgba(0, 0, 0, 0.75);
+        }
+        </style>
+</head>
+<body>
+    <div class="picContainer">
+        <h2>JavaScript Image Slider</h2>
+        <div id="info"></div>
+        <div id="image1" class="img">
+            <img src="https://netresim.com/bilesenler/dosya/dosyalar/image/galeriler/28.01.2017/bresim/Nehir-Ve-Doga-Manzarasi-HD-Wallpapers.jpg" />
+        </div>
+        <div id="image2" class="img">
+            <img src="http://3.bp.blogspot.com/-M4taDE-t9c8/U6bQ-7Y-AfI/AAAAAAAACdM/-n9kmDQI7Lk/s1600/doga-hd-wallpaper-hd-resim.jpg" />
+        </div>
+        <div id="image3" class="img">
+            <img src="http://1.bp.blogspot.com/-eTaD7Gdgy8c/UrA6fTbCBiI/AAAAAAAACOE/SDiPTpBGH3c/s1600/doga-balon-wallpaper-1980x1200.jpg" />
+        </div>
+        <div id="image4" class="img">
+            <img src="https://cdn.wallpapersafari.com/7/90/uK6U2o.jpg" />
+        </div>
+        <div class="left" onclick="left()"></div>
+        <div class="right" onclick="right()"></div>
+        <div class="dots">
+            <div class="dot a1"></div>
+            <div class="dot a2"></div>
+            <div class="dot a3"></div>
+            <div class="dot a4"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+            let i = 0;
+
+let box1 = document.getElementById("image1");
+let box2 = document.getElementById("image2");
+let box3 = document.getElementById("image3");
+let box4 = document.getElementById("image4");
+let a1 = document.querySelector(".a1");
+let a2 = document.querySelector(".a2");
+let a3 = document.querySelector(".a3");
+let a4 = document.querySelector(".a4");
+let info = document.getElementById("info");
+
+a1.onclick = function () {
+    box1.style.opacity = 1;
+    box2.style.opacity = 0;
+    box3.style.opacity = 0;
+    box4.style.opacity = 0;
+    info.innerHTML = "Image 1"
+    i = 0;
+}
+
+a2.onclick = function () {
+    box1.style.opacity = 0;
+    box2.style.opacity = 1;
+    box3.style.opacity = 0;
+    box4.style.opacity = 0;
+    info.innerHTML = "Image 2"
+    i = 1;
+}
+
+a3.onclick = function () {
+    box1.style.opacity = 0;
+    box2.style.opacity = 0;
+    box3.style.opacity = 1;
+    box4.style.opacity = 0;
+    info.innerHTML = "Image 3"
+    i = 2;
+}
+
+a4.onclick = function () {
+    box1.style.opacity = 0;
+    box2.style.opacity = 0;
+    box3.style.opacity = 0;
+    box4.style.opacity = 1;
+    info.innerHTML = "Image 4"
+    i = 3;
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.keyCode == 37) {
+        right();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.keyCode == 39 ) {
+        right();
+    }
+});
+
+function right() {
+    if (i == 0) {
+        box1.style.opacity = 1;
+        box2.style.opacity = 0;
+        box3.style.opacity = 0;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 1"
+        i++
+    }
+    else if (i == 1) {
+        box1.style.opacity = 0;
+        box2.style.opacity = 1;
+        box3.style.opacity = 0;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 2"
+        i++
+    }
+    else if (i == 2) {  
+        box1.style.opacity = 0;
+        box2.style.opacity = 0;
+        box3.style.opacity = 1;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 3"
+        i++
+    }
+    else if (i == 3) {
+        box1.style.opacity = 0;
+        box2.style.opacity = 0;
+        box3.style.opacity = 0;
+        box4.style.opacity = 1;
+        info.innerHTML = "Image 4"
+        i = 0;
+    }
+}
+
+function left() {
+    if (i == 0) {
+        box1.style.opacity = 0;
+        box2.style.opacity = 0;
+        box3.style.opacity = 0;
+        box4.style.opacity = 1;
+        info.innerHTML = "Image 1"
+        i++
+    }
+    else if (i == 1) {
+        box1.style.opacity = 0;
+        box2.style.opacity = 0;
+        box3.style.opacity = 1;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 2"
+        i++
+    }
+    else if (i == 2) {
+        box1.style.opacity = 0;
+        box2.style.opacity = 1;
+        box3.style.opacity = 0;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 3"
+        i++
+    }
+    else if (i == 3) {
+        box1.style.opacity = 1;
+        box2.style.opacity = 0;
+        box3.style.opacity = 0;
+        box4.style.opacity = 0;
+        info.innerHTML = "Image 4"
+        i = 0;
+    }
+}
+
+</script>
