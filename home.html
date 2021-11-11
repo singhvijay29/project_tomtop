@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOMTOP</title>
+    <title>Tomtop – Loving, Shopping, Sharing</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/860d3d4baf.js" crossorigin="anonymous" href="style.css"></script>
@@ -25,17 +25,17 @@
             <input type="text" value="" placeholder="What are you looking for?">
             <a type="button" class="search_btn"><i class="fas fa-search"></i></a>
             <div class="search-hot">
-                <a href="https://www.tomtop.com/earphone-290297/?sort=popular">Popular Earphones</a>
-                <a href="https://www.tomtop.com/smartphones-10001/">Smartphones</a>
-                <a href="https://www.tomtop.com/3d-printers-291206/">3d Printers</a>
-                <a href="https://www.tomtop.com/bikes-10368/">Electric Bikes</a>
-                <a href="https://www.tomtop.com/sports-watch-10483/">Sports Watch</a>
-                <a href="https://www.tomtop.com/search/drone.html">Drone</a>
+                <a>Popular Earphones</a>
+                <a>Smartphones</a>
+                <a>3d Printers</a>
+                <a>Electric Bikes</a>
+                <a>Sports Watch</a>
+                <a>Drone</a>
             </div>
          </div>
-         <div class="wishlist" >
-             <div><i class="far fa-user-plus"></i></div>
-             <div class="cart-word">Sign in</div></div>
+         <div class="wishlist" onclick="redirect_signup();">
+             <div href=""><img src="add-user.png" alt="" class="log_in"></div>
+             <div class="cart-word" >Sign in</div></div>
              <!-- <div class="menu">
                  <h3>Welcome to TOMTOP.com</h3>
                  <button>Sign in</button>
@@ -51,14 +51,14 @@
           -->
          <div class="wishlist">
              <div>
-                <i class="far fa-heart"></i></div>
+                <img src="love.png" alt=""></div>
          <div class="cart-word">Favorites</div>
          </div>
          <div class="cart">
              <div>
-            <i class="fa" style="font-size:24px">&#xf07a;</i>
+           <img src="shopping-cart.png" alt="" style="width:34px" >
             <span class='badge badge-warning' id='lblCartCount'> 0 </span></div>
-            <div class="cart-word"><span >Cart</span></div>
+            <div class="cart-word" style="margin-right: 2%;">Cart</div>
          </div>
      </div>
      <!-- nav-bar -->
@@ -75,46 +75,45 @@
         </div>
         <div class="nav_r">
             <ul>
-             <li class=""><a title="New Arrivals" href="/new-arrivals/"><span id="GAPRO+column+newarrivals+03">New Arrivals</span></a></li>
+             <li class=""><a title="New Arrivals"><span id="GAPRO+column+newarrivals+03">New Arrivals</span></a></li>
             <li class="bm_hot_tag">
 <div class="bm_dropdown nav_end_down lineBlock">
-            <a class="dropdown_link dropdown_hover" data-toggle="dropdown" href="/flashdeals/">
-            <span id="GAPRO+column+flashdeals+03">Flash Deals</span><i class="fas fa-caret-down" style="margin-left: 10px;"></i>
+            <a class="dropdown_link dropdown_hover" data-toggle="dropdown" span id="GAPRO+column+flashdeals+03">Flash Deals</span><i class="fas fa-caret-down" style="margin-left: 10px;"></i>
     </a>
     <div class="dropdown_menu">
-            <a rel="nofollow" href="/top-sellers/"><span id="GAPRO+column+topsellers+02">Top Sellers</span></a>
+            <a rel="nofollow"><span id="GAPRO+column+topsellers+02">Top Sellers</span></a>
         </div>
 </div>
 </li>
             <li class="">
 <div class="bm_dropdown nav_end_down lineBlock">
-            <a class="dropdown_link dropdown_hover" data-toggle="dropdown" href="/coupon.html">
+            <a class="dropdown_link dropdown_hover" data-toggle="dropdown">
             <span id="GAPRO+column+coupons+01">Coupons</span><i class="fas fa-caret-down" style="margin-left: 10px;"></i>
     </a>
     <div class="dropdown_menu">
-            <a rel="nofollow" href="/newbuyers/"><span id="GAPRO+column+newbuyezone+04">New Buyer Zone</span></a>
+            <a rel="nofollow"><span id="GAPRO+column+newbuyezone+04">New Buyer Zone</span></a>
            </div>
 </div>
 </li>
             <li class="">
 <div class="bm_dropdown nav_end_down lineBlock">
-             <a class="dropdown_link dropdown_hover" data-toggle="dropdown" href="/socialsavings/">
+             <a class="dropdown_link dropdown_hover" data-toggle="dropdown">
             <span id="GAPRO+column+socialsavings+01">Social Savings</span><i class="fas fa-caret-down" style="margin-left: 10px;"></i>
     </a>
     <div class="dropdown_menu">
-            <a rel="nofollow" href="/slash-prices/"><span id="GAPRO+column+slashPrices+01">Slash Price</span></a>
-            <a rel="nofollow" href="https://my.tomtop.com/get-it-free"><span id="GAPRO+column+getitfree+06">Get Free Gift</span></a>
+            <a rel="nofollow"><span id="GAPRO+column+slashPrices+01">Slash Price</span></a>
+            <a rel="nofollow"><span id="GAPRO+column+getitfree+06">Get Free Gift</span></a>
             </div>
 </div>
 </li>
            <li class="">
 <div class="bm_dropdown nav_end_down lineBlock">
-    <a class="dropdown_link dropdown_hover" data-toggle="dropdown" href="/clearance/">
+    <a class="dropdown_link dropdown_hover" data-toggle="dropdown">
         <span id="GAPRO+column+clearance+05">Clearance</span><i class="fas fa-caret-down" style="margin-left: 10px;"></i>
     </a>
     <div class="dropdown_menu">
-          <a rel="nofollow" target="_blank" href="/second-hand/"><span id="GAPRO+column+second-hand+05">Second Hand</span></a>
-          <a rel="nofollow" href="https://forum.tomtop.com/"><span id="GAPRO+columncommunity+forum+00">Forum</span></a>
+          <a rel="nofollow" target="_blank" ><span id="GAPRO+column+second-hand+05">Second Hand</span></a>
+          <a rel="nofollow"><span id="GAPRO+columncommunity+forum+00">Forum</span></a>
         </div>
 </div>
 </li>
@@ -161,32 +160,36 @@
     <div class="floors">
         <div class="m_recomentd_column fs1">
             <ul class="lineBlockBox">
-                        <li><a href="https://www.tomtop.com/flashdeals/" class="pic">
+                        <li><a  class="pic">
                         <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/19ooB946728356.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/19ooB946728356.jpg" alt="" id="GAPRO+column+Banner_Show+00" style="display: inline-block;">
                     </a><p>Flash Sale</p>
                 </li>
-                        <li><a href="https://www.tomtop.com/coupon.html" class="pic">
+                        <li><a class="pic">
                         <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/8fLFM047651877.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/8fLFM047651877.jpg" alt="" id="GAPRO+column+Banner_Show+01" style="display: inline-block;">
                     </a><p>Extra 50% Off Coupon</p>
                 </li>
-                        <li><a href="https://my.tomtop.com/get-it-free" class="pic">
+                        <li><a  class="pic">
                         <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/fbE4LB48575398.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/fbE4LB48575398.jpg" alt="" id="GAPRO+column+Banner_Show+02" style="display: inline-block;">
                     </a><p>Get Free Gift</p>
                 </li>
-                        <li><a href="https://www.tomtop.com/new-arrivals/?sort=popular" class="pic">
+                        <li><a  class="pic">
                         <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/V9fg5A49498919.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/V9fg5A49498919.jpg" alt="" id="GAPRO+column+Banner_Show+03" style="display: inline-block;">
                     </a><p>New Arrivals</p>
                 </li>
-                        <li><a href="https://www.tomtop.com/newbuyers/" class="pic">
+                        <li><a  class="pic">
                         <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/18Ixgw51345961.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/18Ixgw51345961.jpg" alt="" id="GAPRO+column+Banner_Show+04" style="display: inline-block;">
                     </a><p>New Buyers Only</p>
                 </li>
+                <li><a  class="pic">
+                    <img class="lazy" src="https://img.tttcdn.com/home/page/2021/11/3/8fLFM047651877.jpg" data-original="//img.tttcdn.com/home/page/2021/11/3/8fLFM047651877.jpg" alt="" id="GAPRO+column+Banner_Show+01" style="display: inline-block;">
+                </a><p>Extra 50% Off Coupon</p>
+            </li>
                     </ul>
         </div>
 
         <div class="floor product_display_Y clearfix fs3">
             <div class="left_banner">
-                <a href="https://www.tomtop.com/flashdeals/">
+                <a >
                     <img src="https://img.tttcdn.com/home/page/2019/12/5/CKMzEk268110122.jpg" alt="Flash Sale" id="GAPRO+column+Flash_sale+01">
                 </a>
             </div>
@@ -194,16 +197,16 @@
                 <div class="m_carousel slide_pro_wrap">
                     <div class="carousel_box">
                         <ul class="carousel_list">
-                                                <li>
+                            <li>
                                 <div class="m_product_box">
                                     <div class="product_img">
-                                        <a href="/p-pb0246b-1.html">
+                                        <a>
                                             <img id="GACLICK+index+Flash_sale-I+PB0246B-1+00" alt="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" style="display: inline-block;">
                                         </a>
                                     </div>
                                     <div class="product_info">
                                         <h5 class="product_title">
-                                            <a href="/p-pb0246b-1.html" title="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PB0246B-1+00">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</a>
+                                            <a title="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PB0246B-1+00">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</a>
                                         </h5>
                                         <div class="m_progress_bar">
                                             <div class=" bar_wrap">
@@ -220,13 +223,13 @@
                                                 <li>
                                 <div class="m_product_box">
                                     <div class="product_img">
-                                        <a href="/p-os4450.html">
+                                        <a>
                                             <img id="GACLICK+index+Flash_sale-I+OS4450+01" alt="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/O/0/OS4450/OS4450-1-d47c-OPrX.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/O/0/OS4450/OS4450-1-d47c-OPrX.jpg" style="display: inline-block;">
                                         </a>
                                     </div>
                                     <div class="product_info">
                                         <h5 class="product_title">
-                                            <a href="/p-os4450.html" title="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+OS4450+01">Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen</a>
+                                            <a title="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+OS4450+01">Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen</a>
                                         </h5>
                                         <div class="m_progress_bar">
                                             <div class=" bar_wrap">
@@ -237,19 +240,19 @@
                                                 <span class="pro_count" data-procount="149">149</span>
                                                 pcs sold                                    </div>
                                         </div>
-                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="92.15">US$92.15</p><p class="original_price pricelab" usvalue="289.99">US$289.99</p></div>                            </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="92.15">US$92.15</p><p class="original_price pricelab" usvalue="94.99">US$94.99</p></div>                            </div>
                                 </div>
                             </li>
                                                 <li>
                                 <div class="m_product_box">
                                     <div class="product_img">
-                                        <a href="/p-paa2551gy-eu.html">
+                                        <a>
                                             <img id="GACLICK+index+Flash_sale-I+PAA2551GY-EU+02" alt="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA2551GY-EU/PAA2551GY-EU-1-47bb-VPui.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA2551GY-EU/PAA2551GY-EU-1-47bb-VPui.jpg" style="display: inline-block;">
                                         </a>
                                     </div>
                                     <div class="product_info">
                                         <h5 class="product_title">
-                                            <a href="/p-paa2551gy-eu.html" title="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA2551GY-EU+02">DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector</a>
+                                            <a title="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA2551GY-EU+02">DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector</a>
                                         </h5>
                                         <div class="m_progress_bar">
                                             <div class=" bar_wrap">
@@ -260,19 +263,19 @@
                                                 <span class="pro_count" data-procount="90">90</span>
                                                 pcs sold                                    </div>
                                         </div>
-                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="99.99">US$99.99</p><p class="original_price pricelab" usvalue="319.42">US$319.42</p></div>                            </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="99.99">US$99.99</p><p class="original_price pricelab" usvalue="94.99">US$94.99</p></div>                            </div>
                                 </div>
                             </li>
                                                 <li>
                                 <div class="m_product_box">
                                     <div class="product_img">
-                                        <a href="/p-paa1950gr-au.html">
+                                        <a>
                                             <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
                                         </a>
                                     </div>
                                     <div class="product_info">
                                         <h5 class="product_title">
-                                            <a href="/p-paa1950gr-au.html" title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
                                         </h5>
                                         <div class="m_progress_bar">
                                             <div class=" bar_wrap">
@@ -283,7 +286,171 @@
                                                 <span class="pro_count" data-procount="149">149</span>
                                                 pcs sold                                    </div>
                                         </div>
-                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="399.99">US$399.99</p></div>                            </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="94.99">US$294.99</p></div>                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/2000/2000/p/gu1/H/H10055/H10055-1-783d-Dcu1.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="94.99">US$194.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                            </ul>
+                        <a class="moveLeftClick left-click" ><i class="icon_left"></i></a>
+                        <a class="moveRightClick right-click showBtn" ><i class="icon_right"></i></a>
+                    <div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="hd_title">
+            <h3 title="Social Saving">Social Saving</h3>
+            <p><span title="Save With Friends">Save With Friends</span></p>
+            <span class="more"><a >More&gt;&gt;</a></span>
+        </div>
+        <div class="floor product_display_Y clearfix fs3">
+            <div class="left_banner">
+                <a >
+                    <img src="https://img.tttcdn.com/product/xy/220/220/p/gu1/C/1/C10034-1/C10034-1-1-9d14-drEk.jpg" alt="Flash Sale" id="GAPRO+column+Flash_sale+01">
+                </a>
+            </div>
+                <div class="right_wrap">
+                <div class="m_carousel slide_pro_wrap">
+                    <div class="carousel_box">
+                        <ul class="carousel_list">
+                                    
+                            <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a >
+                                            <img id="GACLICK+index+Flash_sale-I+PB0246B-1+00" alt="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/I/0/I5370/I5370-1-81de-pzJ7.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PB0246B-1+00">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:67%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="303">303</span>/
+                                                <span class="pro_count" data-procount="446">446</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="45.99">US$45.99</p><p class="original_price pricelab" usvalue="94.99">US$93.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a >
+                                            <img id="GACLICK+index+Flash_sale-I+OS4450+01" alt="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/R/Y/RM13167Y/RM13167Y-1-0b28-JfAD.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/O/0/OS4450/OS4450-1-d47c-OPrX.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a  title="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+OS4450+01">Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:24%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="36">36</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="92.15">US$92.15</p><p class="original_price pricelab" usvalue="294.99">US$294.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA2551GY-EU+02" alt="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/S/4/S4594/S4594-1-9ce5-iIOj.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA2551GY-EU/PAA2551GY-EU-1-47bb-VPui.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA2551GY-EU+02">DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="45">45</span>/
+                                                <span class="pro_count" data-procount="90">90</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="99.99">US$99.99</p><p class="original_price pricelab" usvalue="144.99">US$144.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/2000/2000/p/gu1/E/U/E7936EU/E7936EU-1-3c63-16Qj.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="177.99">US$177.99</p></div>                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/2000/2000/p/gu1/S/3/S5073/S5073-1-6a5b-PqRu.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="233.99">US$233.99</p></div>                            </div>
                                 </div>
                             </li>
                                             </ul>
@@ -292,9 +459,388 @@
                     <div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div></div>
                 </div>
             </div>
+        </div>
+
+        
+
+        <div class="hd_title">
+            <h3 title="Social Saving">Cleaning Sale</h3>
+        </div>
+        <div class="floor product_display_Y clearfix fs3">
+            <div class="left_banner">
+                <a href="https://www.tomtop.com/flashdeals/">
+                    <img src="https://img.tttcdn.com/product/xy/500/500/p/gu1/C/1/C10034-1/C10034-1-1-9d14-lx2l.jpg" alt="Flash Sale" id="GAPRO+column+Flash_sale+01">
+                </a>
             </div>
-</div>
+                <div class="right_wrap">
+                <div class="m_carousel slide_pro_wrap">
+                    <div class="carousel_box">
+                        <ul class="carousel_list">
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PB0246B-1+00" alt="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/D/8/D10478/D10478-1-8989-rg1N.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PB0246B-1+00">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:67%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="303">303</span>/
+                                                <span class="pro_count" data-procount="446">446</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="45.99">US$45.99</p><p class="original_price pricelab" usvalue="94.99">US$94.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+OS4450+01" alt="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/tomtopsite/A/A029/A029-14716839825351.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/O/0/OS4450/OS4450-1-d47c-OPrX.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+OS4450+01">Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:24%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="36">36</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="92.15">US$92.15</p><p class="original_price pricelab" usvalue="94.99">US$99.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA2551GY-EU+02" alt="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/H/U/H18400EU/H18400EU-1-945e-rr39.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA2551GY-EU/PAA2551GY-EU-1-47bb-VPui.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA2551GY-EU+02">DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="45">45</span>/
+                                                <span class="pro_count" data-procount="90">90</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="99.99">US$99.99</p><p class="original_price pricelab" usvalue="109.99">US$109.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/220/220/p/gu1/A/8/A148/A148-1-fd03-jdFH.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="194.99">US$194.99</p></div>                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/2000/2000/p/gu1/E/3/E19153/E19153-1-95b6-MYNA.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="194.99">US$194.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                            </ul>
+                        <a class="moveLeftClick left-click"><i class="icon_left"></i></a>
+                        <a class="moveRightClick right-click showBtn" ><i class="icon_right"></i></a>
+                    <div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="hd_title">
+            <h3 title="Social Saving">Electronic</h3>
+            <p><span title="Save With Friends">Save With Friends</span></p>
+            <span class="more"><a>More&gt;&gt;</a></span>
+        </div>
+        <div class="floor product_display_Y clearfix fs3">
+            <div class="left_banner">
+                <a>
+                    <img src="https://img.tttcdn.com/home/page/2021/9/22/hJH0FF-239684699.jpg" alt="Flash Sale" id="GAPRO+column+Flash_sale+01">
+                </a>
+            </div>
+                <div class="right_wrap">
+                <div class="m_carousel slide_pro_wrap">
+                    <div class="carousel_box">
+                        <ul class="carousel_list">
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PB0246B-1+00" alt="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="lazy" src="https://img.tttcdn.com/product/xy/377/377/img/ibank/2018/796/282/9541282697_1062998964.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/1/PB0246B-1/PB0246B-1-1-f34c-Sb8F.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PB0246B-1+00">2021 Newest Global Version Haylou RT 1.28-Inch Color Screen Smart Watch (LS05S) Sports Bracelet</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:67%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="303">303</span>/
+                                                <span class="pro_count" data-procount="446">446</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="45.99">US$45.99</p><p class="original_price pricelab" usvalue="94.99">US$94.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+OS4450+01" alt="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="lazy" src="https://img.tttcdn.com/product/xy/377/377/p/gu1/I/7/I4537/I4537-1-0bd2-3SNw.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/O/0/OS4450/OS4450-1-d47c-OPrX.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+OS4450+01">Portable Scan Translation Pen Exam Reader Voice Language Translator Device with Touchscreen</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:24%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="36">36</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="92.15">US$92.15</p><p class="original_price pricelab" usvalue="94.99">US$94.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA2551GY-EU+02" alt="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="lazy" src="https://img.tttcdn.com/product/xy/377/377/p/gu1/H/3/H36853/H36853-1-e2a5-P8Ma.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA2551GY-EU/PAA2551GY-EU-1-47bb-VPui.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA2551GY-EU+02">DEERMA Vaccum Cleaner DX700S 15000pa Suction Household 220V Dust Collector</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="45">45</span>/
+                                                <span class="pro_count" data-procount="90">90</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="99.99">US$99.99</p><p class="original_price pricelab" usvalue="155.99">US$155.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                                <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/377/377/p/gu1/S/4/S4734/S4734-1-df48-XY3W.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="231.99">US$231.99</p></div>                            </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="m_product_box">
+                                    <div class="product_img">
+                                        <a>
+                                            <img id="GACLICK+index+Flash_sale-I+PAA1950GR-AU+03" alt="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="lazy" src="https://img.tttcdn.com/product/xy/2000/2000/p/gu1/E/2/E10766EU-2/E10766EU-2-1-a0a0-be0P.jpg" data-original="https://img.tttcdn.com/product/xy/220/220/p/gu1/P/U/PAA1950GR-AU/PAA1950GR-AU-1-10a5-rfpx.jpg" style="display: inline-block;">
+                                        </a>
+                                    </div>
+                                    <div class="product_info">
+                                        <h5 class="product_title">
+                                            <a title="Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine" class="productTitle GATitle" id="GACLICK+index+Flash_sale-T+PAA1950GR-AU+03">Liven G-5 Oil-free Air Fryer  2.5L No Oil Fryer Machine</a>
+                                        </h5>
+                                        <div class="m_progress_bar">
+                                            <div class=" bar_wrap">
+                                                <div style="width:50%" class="bar_wrap_cont"></div>
+                                            </div>
+                                            <div class="lineBlock bar_sale">
+                                                <span class="pro_sell" data-sell="75">75</span>/
+                                                <span class="pro_count" data-procount="149">149</span>
+                                                pcs sold                                    </div>
+                                        </div>
+                                        <div class="product_price"><p class="GAPrice current_price pricelab" usvalue="139.99">US$139.99</p><p class="original_price pricelab" usvalue="194.99">US$194.99</p></div>                            </div>
+                                </div>
+                            </li>
+                                    
+                        </ul>
+                        <a class="moveLeftClick left-click"><i class="icon_left"></i></a>
+                        <a class="moveRightClick right-click showBtn"><i class="icon_right"></i></a>
+                    <div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div><div class="nav_btn"><a class="active"></a><a></a><a></a><a></a><a></a></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<footer class="contentOut m_footer">
+    <div class="contentInside">
+        <div class="follow_us_subscribe clearfix">
+            <div class="bm_followus style3">
+                <h3>Follow us</h3>
+                <div class="bd">
+                                            <a class="facebook" target="_blank">
+                                                <img src="https://img.icons8.com/color/24/000000/facebook-new.png"/>
+                                                    </a>
+                                            <a class="instagram" target="_blank">
+                                                <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+                                                    </a>
+                                            <a class="twitter" target="_blank">
+                                                            <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDAiIGhlaWdodD0iNDAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTg2LDE3MmMtNDcuNDk2NDksMCAtODYsLTM4LjUwMzUxIC04NiwtODZ2MGMwLC00Ny40OTY0OSAzOC41MDM1MSwtODYgODYsLTg2djBjNDcuNDk2NDksMCA4NiwzOC41MDM1MSA4Niw4NnYwYzAsNDcuNDk2NDkgLTM4LjUwMzUxLDg2IC04Niw4NnoiIGZpbGw9IiMzNDk4ZGIiPjwvcGF0aD48ZyBmaWxsPSIjZmZmZmZmIj48cGF0aCBkPSJNMTM0LjQ4MzU0LDU0LjM4NzQ0Yy0zLjU2MzY0LDEuNTc4NDUgLTcuMzk2NjQsMi42MzE2NSAtMTEuNDM5NzQsMy4xMjk5N2M0LjExMDQ0LC0yLjQ0MDQxIDcuMjcyNzMsLTYuMzMyNjYgOC43NTY5MSwtMTAuOTMwNjVjLTMuODQ2NDcsMi4yNTQ1NSAtOC4xMDc3NSwzLjkxMTExIC0xMi42NDEwOCw0Ljc4Mzg0Yy0zLjYyMDIsLTMuODM4MzkgLTguNzgzODQsLTYuMjE5NTMgLTE0LjUwNTA2LC02LjIxOTUzYy0xMC45ODk5LDAgLTE5Ljg5NzY1LDguODI5NjMgLTE5Ljg5NzY1LDE5LjcxNzE4YzAsMS41NDA3NCAwLjE4MDQ3LDMuMDQxMDggMC41MTk4Nyw0LjQ5ODMyYy0xNi41MzMzNCwtMC44Mjk2MyAtMzEuMTk3MzIsLTguNjg5NTcgLTQxLjAwNzQzLC0yMC42MTY4NWMtMS43MjM5MSwyLjkxNDQ4IC0yLjY5MzYsNi4zMjcyOCAtMi42OTM2LDkuOTI4NjJjMCw2Ljg0NDQ1IDMuNTA0MzgsMTIuODcwMDQgOC44NDg0OSwxNi40MjAyMWMtMy4yNjE5NSwtMC4wOTk2NiAtNi4zMzI2NiwtMS4wMDc0MSAtOS4wMjA4OCwtMi40NjE5NWMwLDAuMDU5MjYgMCwwLjE0ODE1IDAsMC4yMzE2NWMwLDkuNTY0OTkgNi44NjA2MSwxNy41Mjk5NyAxNS45NTQyMiwxOS4zNDI3N2MtMS42NjE5NSwwLjQ1NTIyIC0zLjQxODE4LDAuNzA4NDIgLTUuMjI4MjksMC43MDg0MmMtMS4yODQ4NSwwIC0yLjUzNzM3LC0wLjE0NTQ1IC0zLjc0OTUsLTAuMzYzNjRjMi41MzE5OSw3LjgxNjg0IDkuODc3NDUsMTMuNTI5OTcgMTguNTgwNDgsMTMuNjk5NjdjLTYuODA5NDMsNS4yNzk0NiAtMTUuMzg1ODcsOC40NDE3NiAtMjQuNzExMTIsOC40NDE3NmMtMS42MTA3OCwwIC0zLjE4NjUzLC0wLjA5MTU4IC00Ljc0MzQ0LC0wLjI4MDEzYzguODEwNzgsNS41Nzg0NSAxOS4yNzI3NCw4Ljg0ODQ5IDMwLjUwMjM3LDguODQ4NDljMzYuNTkyNjEsMCA1Ni42MTE0OCwtMzAuMDQ5ODUgNTYuNjExNDgsLTU2LjExODU1YzAsLTAuODUzODcgLTAuMDI2OTQsLTEuNzA1MDUgLTAuMDY3MzQsLTIuNTQ1NDZjMy45MDU3MywtMi43NTgyNSA3LjI3MjczLC02LjIzODM5IDkuOTMxMzIsLTEwLjIxNDE1Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="/>
+                                                    </a>
+                                            <a class="youtube" target="_blank">
+                                                <img src="https://img.icons8.com/color/48/000000/youtube-play.png"/>
+                                                    </a>
+                                            <a class="forum" target="_blank">
+                                                            <i class="icon_forum"></i>
+                                                    </a>
+                                            <a class="vk" target="_blank">
+                                                <img src="https://img.icons8.com/color/48/000000/vk-circled.png"/>
+                                                    </a>
+                                            <a class="pinterest" target="_blank">
+                                                <img src="https://img.icons8.com/color/48/000000/pinterest--v1.png"/>
+                                                    </a>
+                                    </div>
+            </div>
+
+	        <div class="m_mobile">
+	        	<span class="followUs">TOMTOP Mobile</span>
+        		<a rel="nofollow" target="_blank"><span class="icon_apple"><img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png"/> </span></a>
+        		<a rel="nofollow" target="_blank"><span class="icon_android"> <img src="https://img.icons8.com/ios-filled/50/000000/android-os.png"/> </span></a>
+	        </div>
+		</div>
+    </div>
+
+        <ul class="footer_siteMap lineBlockBox">
+            <li class="lineBlock">
+    <p>Company Info</p>
+                                <a rel="nofollow" title="About TOMTOP" >About TOMTOP</a>
+                                        <a title="Site Map">Site Map</a>
+                                        <a rel="nofollow" title="Legal Window" >Legal Window</a>
+                                        <a title="Forum">Forum</a>
+                                        <a title="Blog">Blog</a>
+                            </li>
+            <li class="lineBlock">
+    <p>Payment &amp; Shipping</p>
+                                <a rel="nofollow" title="How To Pay">How To Pay</a>
+                                        <a rel="nofollow" title="Shipping FAQ">Shipping FAQ</a>
+                                        <a rel="nofollow" title="Ordering FAQ">Ordering FAQ</a>
+                            </li>
+            <li class="lineBlock">
+    <p>Policies &amp; Service</p>
+                                <a rel="nofollow" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+                                        <a rel="nofollow" title="Return Policy &amp; Guarantees">Return Policy &amp; Guarantees</a>
+                                        <a rel="nofollow" title="Support FAQ">Support FAQ</a>
+                                        <a rel="nofollow" title="Privacy Policy">Privacy Policy</a>
+                                        <a title="Reseller Ratings" target="_blank">Reseller Ratings</a>
+                                        <a rel="nofollow" title="Second-Hand Rules">Second-Hand Rules</a>
+                                        <a rel="nofollow" title="Intellectual Property Rights">Intellectual Property Rights</a>
+                            </li>
+            <li class="lineBlock">
+    <p>Partner Program</p>
+                                <a title="Get It Free">Get It Free</a>
+                                        <a rel="nofollow" title="Affiliate Program">Affiliate Program</a>
+                                        <a rel="nofollow" title="Wholesale Program">Wholesale Program</a>
+                                        <a rel="nofollow" title="Dropship program">Dropship program</a>
+                                        <a rel="nofollow" title="Super User Program">Super User Program</a>
+                                        <a title=" Students Exclusive"> Students Exclusive </a>
+                                        <a title="See All">See All</a>
+                            </li>
+        <li class="lineBlock m_subscribe_input">
+ <p>Subscribe To Our Newsletter</p>
+<div class="savings">
+    <input type="text" id="subEmail" placeholder="Enter E-mail to Get $50 Cash Coupons!">
+    <p class="pri_item">You will receive our latest updates, news, and promotions from Tomtop.</p>
+    <input type="button" value="Subscribe" onclick="return ischeckemail()" class="btn btn-orange">
+    <a title="Privacy Policies">
+        Privacy Policies</a>
+</div>
+</li>
+</ul>
+
+<div class="m_payment_icon">
+    <img src="payment.png" alt="">
+</div>
+<p class="pu_copyright">Copyright © 2004 - 2021 TOMTOP All Rights Reserved. (Build: 2305)</p>
+   
+
+</footer>
+
+
+
+
+
+
+
+            
+
+
 
 
 </div>    
@@ -330,4 +876,9 @@ function changeSlide(){
 }
 
 changeSlide();
+
+
+function redirect_signup(){
+window.location.href="Signup.html"
+}
 </script>

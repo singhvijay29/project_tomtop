@@ -1,100 +1,50 @@
-function Signup(e){
-    e.preventDefault()
+function signUp(){
 
-    let form = document.getElementById("signupForm")
+    var email = document.getElementById('email');
+    var password2 = document.getElementById('password2');
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
 
-    let user_data = {
-        email: form.bm_text.value,
-        password1: form.password1.value,
-        password2: form.password2.value,
+    if(email.value.length == 0){
+        alert('Please fill in email');
+
+    }else if(password2.value.length == 0){
+        alert('Please fill in password');
+
+    }else if(email.value.length == 0 && password2.value.length == 0){
+        alert('Please fill in email and password');
+
+    }else if(password2.value.length >= 16){
+        alert('Max of 16');
+
+    }else if(!password2.value.match(numbers)){
+        alert('please add 1 number');
+
+    }else if(!password2.value.match(upperCaseLetters)){
+        alert('please add 1 uppercase letter');
+
+    }else if(!password2.value.match(lowerCaseLetters)){
+        alert('please add 1 lovercase letter');
+
+    }else{
+        localStorage.setItem('email', email.value);
+        localStorage.setItem('password2', password2.value);
+        window.location.href = 'login.html'
     }
-
-    console.log(user_data)
-    user_data = JSON.stringify(user_data)
-
-
-    fetch("https://masai-api-mocker.herokuapp.com/auth/register", {
-        method: "POST",
-        body: user_data,
-        headers: {
-            "Content-Type": "application/json"
-        },
-    })
-
-    .then((res)=>{
-        return res.json();
-
-    })
-    .then((res)=>{
-        console.log(res)
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
-
 }
 
+//checking
+function check(){
+    var storedemail = localStorage.getItem('email');
+    var storedpassword2 = localStorage.getItem('password2');
 
+    var useremail = document.getElementById('eml');
+    var userpassword2 = document.getElementById('pass');
 
-function Login(e){
-    e.preventDefault()
-
-    let form = document.getElementById("loginForm")
-
-    let user_data = {
-      
-        password: form.pass.value,
-        username: form.eml.value,
-       
+    if(useremail.value == storedemail && userpassword2.value == storedpassword2){
+        alert('You are logged in.');
+    }else{
+        alert('Error on login');
     }
-  let  data_to_send = JSON.stringify(user_data)
-
-    console.log(data_to_send)
-  
-
-fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
-
-    method: 'POST',
-    body: data_to_send,
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-})
-
-.then((res)=>{
-        return res.json();
-
-    })
-    .then((res)=>{
-        console.log(res)
-
-        fetchData(user_data.username ,res.token)
-
-        })
-    .catch((err)=>{
-        console.log(err)
-    })
-}
-
-function fetchData(username ,token){
-
-    fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
-
-        headers: {
-            "Content-Type": "application/json",
-
-            Authorization: `Bearer ${token}`,
-        },
-    })
-    .then((res)=>{
-        return res.json();
-
-    })
-    .then((res)=>{
-        console.log(res)
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
 }

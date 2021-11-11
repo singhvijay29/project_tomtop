@@ -22,18 +22,18 @@
 
 <div class="m_text">
     <div class="text_c"><i class="far fa-envelope" class="icon_psw"></i>
-        <input name="email" type="text" placeholder="Email address" class="bm_text" class="email">
-        <p class="error_info">Email address</p>
+        <input name="email" type="text" placeholder="Email address" class="bm_text" id="email">
+        <p id="error_info1">Email address</p>
     </div>
 </div>
 <div class="m_text">
     <div class="text_c"><i class="fas fa-lock" class="icon_psw"></i>
-        <input name="pw" type="password" placeholder="6-20 characters (letters or numbers only)" class="bm_text" class="password1">
-        <p class="error_info">Password</p>
+        <input name="pw" type="password" placeholder="6-20 characters (letters or numbers only)" class="bm_text" id="password1">
+        <p id="error_info2">Password</p>
     </div>
     <div class="text_c" style="margin-top:20px;"><i class="fas fa-lock" class="icon_psw"></i>
-        <input name="pw" type="password" placeholder="Enter Password Again" class="bm_text" class="password2">
-        <p class="error_info">Password</p>
+        <input name="pw" type="password" placeholder="Enter Password Again" class="bm_text" id="password2">
+        <p id="error_info3">Password</p>
     </div>
 </div>
 <div class="agress_c">
@@ -46,9 +46,9 @@
     </p>
 </div>
 <div class="agress_c">
-    <p><input type="checkbox" name="signupNewsletter" value="1">Yes, Sign up our newsletter, get  $50 coupons in your first email! You will receive our latest updates, news, and promotions from Tomtop.</p>
+    <p><input type="checkbox" name="signupNewsletter" value="1" id="remember" >Yes, Sign up our newsletter, get  $50 coupons in your first email! You will receive our latest updates, news, and promotions from Tomtop.</p>
 </div>
-<input type="button" value="Create My Account" class="bm_btn">
+<input type="button" value="Create My Account" class="bm_btn" onclick="signUp()">
 <p class="hq_points"><em>&gt;&gt;</em>Register at tomtop.com and receive 10 points.</p>
     <div class="create_account">
         <em>Already have an account ?</em>
@@ -61,4 +61,6 @@
     
 </body>
 </html>
-<script src="script.js"></script>
+<script src="script.js">
+
+</script>
