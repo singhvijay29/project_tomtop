@@ -1,50 +1,65 @@
-function signUp(){
+function signUp()
+{
+let email,psw,psw2;
+email=document.getElementById("email").value;
 
-    var email = document.getElementById('email');
-    var password2 = document.getElementById('password2');
-    var lowerCaseLetters = /[a-z]/g;
-    var upperCaseLetters = /[A-Z]/g;
-    var numbers = /[0-9]/g;
+psw=document.getElementById("password1").value;
 
-    if(email.value.length == 0){
-        alert('Please fill in email');
+psw2=document.getElementById("password2").value;
 
-    }else if(password2.value.length == 0){
-        alert('Please fill in password');
 
-    }else if(email.value.length == 0 && password2.value.length == 0){
-        alert('Please fill in email and password');
 
-    }else if(password2.value.length >= 16){
-        alert('Max of 16');
+let user_records=new Array();
+user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+if(user_records.some((v)=>{return v.email==email}))
+{
+  alert("Account already exists");
+}
+if(psw!==psw2) {
+    alert("Please enter same password")
+}
+else{
+  user_records.push({
+  "name":name,
+  "email":email,
+  "psw":psw,
+  "psw2":psw2
 
-    }else if(!password2.value.match(numbers)){
-        alert('please add 1 number');
-
-    }else if(!password2.value.match(upperCaseLetters)){
-        alert('please add 1 uppercase letter');
-
-    }else if(!password2.value.match(lowerCaseLetters)){
-        alert('please add 1 lovercase letter');
-
-    }else{
-        localStorage.setItem('email', email.value);
-        localStorage.setItem('password2', password2.value);
-        window.location.href = 'login.html'
-    }
+})
+localStorage.setItem("users",JSON.stringify(user_records));
+window.location.href="login.html"
 }
 
-//checking
-function check(){
-    var storedemail = localStorage.getItem('email');
-    var storedpassword2 = localStorage.getItem('password2');
+}
 
-    var useremail = document.getElementById('eml');
-    var userpassword2 = document.getElementById('pass');
 
-    if(useremail.value == storedemail && userpassword2.value == storedpassword2){
-        alert('You are logged in.');
-    }else{
-        alert('Error on login');
+
+
+// login
+// function logIn(){
+//     event.preventDefault();
+//     var store = JSON.parse(window.localStorage.getItem('users'));
+//     var eml = document.getElementById("eml1").value;
+//     var pass = document.getElementById("pass1").value;
+
+//     var KeyName = window.localStorage.key(index);
+    
+
+//     if(eml === store[i] && pass === store[i]){
+//         window.location.href="home.html";
+//     }else{
+//         alert("invalid Credentials")
+//     }
+
+// }
+
+
+function logIn(e){
+    e.preventDefault();
+
+    var eml1 = document.getElementById("eml1").value;
+    var pass = document.getElementById("pass1").value;
+    if(eml1.length>0 && pass.length>0){
+        window.location.href="home.html"
     }
 }
